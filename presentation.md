@@ -1,24 +1,45 @@
 
-# Introduction to Indie Web Camp
+# Introduction to the Indie Web
 
-# returning social media to its weblogging roots
+## returning social media to its roots
 
 ---
 
-## Dan Lyke
+## Me: Dan Lyke
 
+My (non-techie) sister: "Does it ever bug you that you did everything Facebook does, 6 years earlier?"
+
+- BBS user since early '80s
+- and operator (1:362/1203, among others)
+- Hyper! HTML browser in 1993, that ran on a BBS platform
 - Web presence since mid 1994
-- Microportalist since February 1998.
-- "Does it ever bug you that you did everything Facebook does, 6 years earlier?"
+- Microportalist/Weblogger/whatever since February 1998.
+
+---
+
+## Silos vs Distributed
+
+- CompuServe
+- BBSes (1978), Usenet (1980), and FidoNet (1984)
+- AOL, Prodigy, Delphi, WELL, etc)
+- The September That Never Ended
+- Personal sites, Journalers (Bryon Sutherland, etc)
+- Geocities, Tripod, Talk.Salon.com
+- Weblogs (including Blogger)
+- Twitter, Facebook, MySpace, Facebook, LiveJournal, Tumblr, Orkut, Tribe, Ello, ...
+
+(Google+?)
 
 ---
 
 ## A Brief History of Weblogs
 
+Not quite escribitionism
+
 - August 1997: Scripting News and Steve Jobs' return to Apple
 - Jorn Barger coined "weblog" in December 1997
 - my own Newwwsboy, February 1998.
-- "Microportals", "escribitionists", not quite journals
+- "Microportals"
 - Peter Merholz coined "blog" in April or May of 1999
 
   I've decided to pronounce the word "weblog" as wee'- blog. Or "blog" for short."
@@ -28,322 +49,139 @@
 
 ---
 
+## Social Media: evil
 
-
-Less silly examples:
-
-- Rental policies
-- Discount conditions
-- CRM
-
----
-
-## [X] is not a database
-
-Or at least doesn't make a model.
-
-- MySQL is not a database
-- MongoDB is not a database
-- Excel is not a database
-  (but you knew that)
-- Get off my lawn
+- Data apocalypse (from your ISP to GeoCities to TwitPic)
+- Controlling presentation
+- NymWars
+- Content restrictions
+- Searching your history
 
 ---
 
-## M->C->C->V Architecture
+## How do we fix this?
 
-<img src="diagrams/MCCV.svg" align="right">
-
-- Web apps may need controllers (on servers) talking to controllers
-  (in browsers).
-
----
-
-## Datastore->Ms->C->C->V
-
-<img src="diagrams/MMCCVV.svg" align="right">
-
-- Central atomic data store
-- Multiple replicated data stores
-- Redundant Model instances talking to both.
+- Back to blogs?
+- POSSE: Publish Own Site, Syndicate Everywhere
+- PESOS: Publish Elsewhere, Syndicate Own Site
+- Interop between personal sites
+- Search / Syndication
+- Is the web the right platform?
 
 ---
 
-## Sharing Model constraints
+## Back to blogs
 
-- Can't depend on the client to abide by constraints.
-- Don't want to duplicate code.
-- Especially don't want divergent code (different regex engines, etc)
-
----
-
-## Test Driven Development
-
-- "make && make test && make deploy"
-- Hard to do if tests involve human interaction.
-- Sixteen hour test runs...
+- *.blogspot.com/*.wordpress.com just lets someone else own it.
+- domain names are hard to justify, and expire
+- but at least you own it.
 
 ---
 
-## Nodejs - stand-alone JavaScript
+## POSSE - writing
 
-- Hello, World: console.log("Hello, World");
-- Autocomplete
-
-Run "node", it gives you a prompt, type "console.", hit tab, *boom*,
-list of methods to the console object.
-
-node helloworld.js
+<img src="./diagrams/SetstatusScreenshot.png">
 
 ---
 
-## Common use of libraries
+## POSSE - reading
 
-- commonfunc.js builds an export table
-- clientfile.html runs it in the browser
-- hello2.js runs it from the command-line
+<img src="./diagrams/GetStatusScreenshot.png">
 
 ---
 
-## commonfunc.js
+## POSSE - Twitter
 
-<pre>(function(exports) {
- 
-// Define all your functions on the
-// exports object
-    exports.doubleIt = function(it) {
-        it = Number(it);
-        return it + it;
-    };
-})((typeof process === 'undefined'
-    || !process.versions) ?
-   window.common = window.common || {}
-   : exports);
-</pre>
+<img src="./diagrams/TwitterScreenshot.png">
 
 ---
 
-## use it from HTML
+## POSSE - Facebook
 
-HTML:
-
-<pre>&lt;html&gt;&lt;head&gt; 
-&lt;script src="commonfunc.js"&gt;&lt;/script&gt;
-&lt;/head&gt;&lt;body&gt;
- &lt;script&gt;
-var it = 2;
-alert("Doubling "+it+" yields "
-   + window.common.doubleIt(2));
-&lt;/script&gt;
-&lt;/body&gt;&lt;/html&gt;</pre>
-
+<img src="./diagrams/FacebookScreenshot.png">
 
 ---
 
-## From the command-line
+## PESOS
 
-<pre>var common = require('./commonfunc.js');
-console.log("Doubling 2 to get "
-            + common.doubleIt(2));
-</pre>
+- Sometimes their UI is better
+- Cronjobs grabbing archives
 
 ---
 
-## Test it
+## Interop
 
-test/test.js
-
-- jshint lints it
-- mocha tests it.
-- Integrate into deployment, ie in Makefile:
-
-<pre>deploy: ...
-	jshint *.js
-	mocha tests
-    rsync ... remote@server:/path/to/project
-    ...
-</pre>
+-- Comments
+-- Like
+-- RSVP (yes/no/maybe)
+-- @mentions
+-- Discovery
+-- Other stuff?
 
 ---
 
-## Write tests
+## Interop - Webmention/Indie-Action
 
-<pre>var assert = require("assert");
-var common = require('../commonfunc.js');
+&lt;link rel="webmention" href="http://www.flutterby.com/archives/webmention.cgi" /&gt;
 
-describe('common', function(){
- describe('#doubleIt()', function() {
-   it('should return 4 when called with 2',
-     function()
-     { 
-       assert.equal(4, common.doubleIt(2))
-     } );
+&lt;indie-action do="post" with="http://www.flutterby.com/archives/comments/20715.html"&gt;
+&lt;form method="post" accept-charset="UTF-8" style="margin-left: 0;" action="/archives/viewentry.cgi?id=20715"&gt;
 
-    // and so forth ...
+-- 
 
-    })
-});
-</pre>
+## Interop - Microformats2
 
+&lt;article class="h-entry"&gt;&lt;h2 class="p-name"&gt;On longevity and code&lt;/h2&gt;
+&lt;div&gt;
+&lt;p&gt;&lt;strong&gt;2014-12-08 03:08:15.357549-08 by 
+&lt;a href="/archives/user.cgi?id=1" class="p-author h-card"&gt;Dan Lyke&lt;/a&gt; 
+ 2 comments [&lt;a href="/archives/editentry.cgi?id=20715"&gt;edit&lt;/a&gt;]  &lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
 
----
+&lt;div class="e-content"&gt;&lt;p&gt;&lt;a href="https://twitter.com/dalmaer/status/540614799886139392"&gt;RT Dion Almaer &#8207;@dalmaer&lt;/a&gt;:&lt;/p&gt;
 
-## npm - Node Package Manager
+&lt;blockquote&gt;&lt;p&gt;   "compiling a C program from 20+ years ago is actually a lot easier than getting a Rails app from last year to work" &lt;a href="https://passy.svbtle.com/building-vim-from-1993-today"&gt;https://passy.svbtle.com/building-vim-from-1993-today&lt;/a&gt;
+&lt;/p&gt;
 
-- -g to install globally, people like local installation
-- also runs packages.
+&lt;/blockquote&gt;&lt;/div&gt;
 
 ---
 
-## Nodejs - server
+## Interop - Other mechanisms
 
-A computer is a state machine. Threads are for people who can't
-program state machines.  Alan Cox
-
-- event-driven
-- easy to combine server types
-- lots of functionality layering
+- OPML files and feeds
+- Brid.gy
+- WithKnown.com
 
 ---
 
-## RPC servers
+## Interop - Search & Syndication
 
-<pre>// Load the TCP Library
-net = require('net');
-var common = require('./commonfunc.js');
-
-// Start a TCP Server
-net.createServer(
-  function (socket) 
-  {
-    socket.on('data',
-      function(data)
-      { var s = "" + data;
-        socket.write(
-          common.doubleIt(s.replace("\n",""))
-          + "\n"); });
-  }).listen(5000)</pre>
+- A smarter aggregator/feed reader?
+- Searching my archives vs searching my feed reader's archives
 
 ---
 
-## HTML servers
+## Is the web the right platform?
 
-<pre>var http = require('http');
-http.createServer(function (req, res) {
-  res.writeHead(200, 
-    {'Content-Type': 'text/plain'});
-  res.end('Hello World\n');
-}).listen(1337, '127.0.0.1');
-</pre>
+- Domain names
+- Distributed hosting
+- Reader control
+- End-to-end Encryption
 
 ---
 
-## HTTP server
+## Detractors
 
-
-<pre>var http = require('http');
-
-var server = http.createServer(
-  function (request, response) {
-    response.writeHead(200,
-      {"Content-Type": "text/plain"});
-    response.end("Hello World\n");
-});
-server.listen(8000);
-</pre>
-
----
-
-## HTTP server with a router
-
-<pre>var server =
-   require('node-router').getServer();
-server.get("/",
-  function (request, response) {
-  response.simpleText(200, "Hello World!");
-});
-server.listen(8000, "localhost");
-</pre>
-
----
-
-## Standing on the feet of giants
-
-- Express
-- Anyauth
-- ShareJS - live concurrent editing
-- LiveDB - database joiner/controller
-- Derby
-- Meteor
-- Bla bla bla
-
----
-
-## Application in the Browser
-
-- Minimize round-trips
-- Avoid re-sending lots of HTML, just JSON
-- Became the dominant mode, then abandoned (Twitter, etc).
-- Same templates server and browser side, hybrid solutions.
-
-Hybrid solutions render HTML, send that HTML across along with enough
-JavaScript to use that HTML as a template. This gives super fast
-initial page rendering, and then allows JSON thereafter.
-
----
-
-## Derby demo
-
-- cd derbyjs/first-project
-- npm start
-- http://127.0.0.1:3000/
-- Changes in one field show up in all other fields on all other browsers!
-- emacs views/app/home.html lib/app/index.js 
-- Saving home.html updates the browser too.
-
-
----
-
-## Derby vs Meteor
-
-- Meteor: GPL, own package manager, "Fibers", shakey security
-- Derby: MIT, npm, callbacks, some support for JavaScript-less HTML (helloo accessibility!)
-
----
-
-## So not quite there yet
-
-Other languages have fully-formed frameworks and content management
-systems, Node has some components upon which you can hang an app,
-frameworks are still coming together.
-
----
-
-## Do I have to write in JavaScript?
-
-- Coffeescript
-- ActionScript
-- C++/emscripten/clang/LLVM
-- LLVM means ActionScript, Ada, D, Fortran, OpenGL Shading Language,
-  Haskell, Julia, Objective-C, Python, Ruby, Rust,
-  Scala
-- C means Python, Unreal, etc...
-- parenscript
-
----
-
-## Other technology of note
-
-- OS/X jsc
-
+Clay Shirky's "Bad Idea Bulletin Board" https://ello.co/cshirky/post/fN-7ZRpvarjpZE34HwGkoA
 
 ---
 
 ## Questions?
 
-- nodejs.org
-- derbyjs.com
+http://www.indiewebcamp.com
 
+Freenode IRC channel indiewebcamp
 
 danlyke@flutterby.com
 http://www.flutterby.net/User:DanLyke
