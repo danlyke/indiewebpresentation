@@ -51,15 +51,31 @@ Not quite escribitionism
 
 ## Social Media: evil
 
-- Data apocalypse (from your ISP to GeoCities to TwitPic)
-- Controlling presentation
+- Data apocalypse (from your ISP to AOL HomeSites to GeoCities to Posterous to TwitPic)
+- Controlling presentation / Sociology experiments on you.
 - NymWars
 - Content restrictions
 - Searching your history
 
 ---
 
-## How do we fix this?
+## Better
+
+- Own your data
+- Avoid lock-in
+- Control what you share
+
+---
+
+## Principles to get there
+
+- Principles over project-centrism: Worry about interop, not specific applications.
+- Selfdogfood: Code runs, standards documents don't, scratch your own itch first.
+- Design first, formats second: prototype for what you want to have happen, how it happens will evolve.
+
+---
+
+## Mechanics to get there
 
 - Back to blogs?
 - POSSE: Publish Own Site, Syndicate Everywhere
@@ -79,6 +95,8 @@ Not quite escribitionism
 ---
 
 ## POSSE - writing
+
+A few lines of code back in May of 2009...
 
 <img src="./diagrams/SetstatusScreenshot.png">
 
@@ -127,7 +145,13 @@ Not quite escribitionism
 &lt;indie-action do="post" with="http://www.flutterby.com/archives/comments/20715.html"&gt;
 &lt;form method="post" accept-charset="UTF-8" style="margin-left: 0;" action="/archives/viewentry.cgi?id=20715"&gt;
 
--- 
+---
+
+## Interop - Hacking MIME types
+
+Evolving.
+
+---
 
 ## Interop - Microformats2
 
@@ -177,11 +201,14 @@ Clay Shirky's "Bad Idea Bulletin Board" https://ello.co/cshirky/post/fN-7ZRpvarj
 
 ---
 
-## Questions?
+## Resources
 
-http://www.indiewebcamp.com
+- http://www.indiewebcamp.com
+- Freenode IRC channel indiewebcamp
+- http://microformats.org/
+- https://www.brid.gy/
+- https://withknown.com/
 
-Freenode IRC channel indiewebcamp
 
 danlyke@flutterby.com
 http://www.flutterby.net/User:DanLyke
