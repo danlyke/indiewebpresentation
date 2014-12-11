@@ -111,12 +111,12 @@ Not quite escribitionism
 
 ## Interop
 
--- Comments
--- Like
--- RSVP (yes/no/maybe)
--- @mentions
--- Discovery
--- Other stuff?
+- Comments
+- Like
+- RSVP (yes/no/maybe)
+- @mentions
+- Discovery
+- Other stuff?
 
 ---
 
