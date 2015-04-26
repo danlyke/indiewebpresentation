@@ -17,21 +17,6 @@ My (non-techie) sister: "Does it ever bug you that you did everything Facebook d
 
 ---
 
-## Silos vs Distributed
-
-- CompuServe
-- BBSes (1978), Usenet (1980), and FidoNet (1984)
-- AOL, Prodigy, Delphi, WELL, etc)
-- The September That Never Ended
-- Personal sites, Journalers (Bryon Sutherland, etc)
-- Geocities, Tripod, Talk.Salon.com
-- Weblogs (including Blogger)
-- Twitter, Facebook, MySpace, Facebook, LiveJournal, Tumblr, Orkut, Tribe, Ello, ...
-
-(Google+?)
-
----
-
 ## A Brief History of Weblogs
 
 Not quite escribitionism
@@ -49,9 +34,46 @@ Not quite escribitionism
 
 ---
 
-## Social Media: evil
+## A Brief History of "Social Media"
 
-- Data apocalypse (from your ISP to AOL HomeSites to GeoCities to Posterous to TwitPic)
+The Facebook of the '90s:
+
+<img src="diagrams/AOLFloppy.jpg">
+
+---
+
+## Silos vs Distributed
+
+- CompuServe
+- BBSes (1978), Usenet (1980), and FidoNet (1984)
+- AOL, Prodigy, Delphi, WELL, etc)
+- The September That Never Ended
+- Personal sites, Journalers (Bryon Sutherland, etc)
+- Geocities, Tripod, Talk.Salon.com
+- Weblogs (including Blogger)
+- Twitter, Facebook, MySpace, Facebook, LiveJournal, Tumblr, Orkut, Tribe, Ello, ...
+
+(Google+?)
+
+---
+
+## Silos: Bad Investment
+
+"Yeah, my girlfriend's 15-year-old daughter has to use Facebook because the adults who plan her theater events haven't figured out that <i>none of the kids they're trying to organize use Facebook, not a single one</i>. She logged in on my phone yesterday because she deleted it from hers to save space. (And Safari wouldn't load the website for some reason.)"
+
+http://www.metafilter.com/149084/A-Youth-Untouched-By-Social-Media#6019992
+
+---
+
+## Silos: Unreliable
+
+- Data apocalypse (from your ISP to AOL HomeSites to GeoCities to Posterous to TwitPic to Ancestry.com)
+
+http://www.slate.com/articles/technology/future_tense/2015/04/myfamily_shuttered_ancestry_com_deleted_10_years_of_my_family_history.html
+
+---
+
+## Silos: Evil
 - Controlling presentation / Sociology experiments on you.
 - NymWars
 - Content restrictions
@@ -59,11 +81,13 @@ Not quite escribitionism
 
 ---
 
-## Better
+## Distributed: Better
 
-- Own your data
+- Keep your data around for posterity
+- Read what you want to
+- Be who you want to / control what you share
+- Say what you want to
 - Avoid lock-in
-- Control what you share
 
 ---
 
@@ -120,12 +144,36 @@ A few lines of code back in May of 2009...
 
 ---
 
+## Micropub
+
+http://indiewebcamp.com/micropub 
+
+Micropub is an open API standard that is used to create posts on one's own domain using third-party clients. Web apps and native apps (e.g. iPhone, Android) can use Micropub to post short notes, photos, events or other posts to your own site, similar to a Twitter client posting to Twitter.com. 
+
+---
+
+
+## POSSE - Micropub to ...
+
+https://feverdream.herokuapp.com/
+
+Feverdream lets you use Micropub clients like Quill to post to hosted blogs on Wordpress.com, Tumblr, or Blogger. 
+---
+
 ## PESOS
 
 - Sometimes their UI is better
 - Cronjobs grabbing archives
 
 ---
+
+## PESOS - Micropub
+
+http://ownyourgram.com/
+
+http://github.com/snarfed/ownyourresponses
+
+--
 
 ## Interop
 
@@ -183,6 +231,11 @@ Evolving.
 
 - A smarter aggregator/feed reader?
 - Searching my archives vs searching my feed reader's archives
+
+---
+
+## Interop: Known Demo
+
 
 ---
 
