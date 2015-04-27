@@ -212,18 +212,22 @@ http://github.com/snarfed/ownyourresponses
 
 ---
 
+## Interop protocols
+
+"HTML is my API" -- Aaaron Parecki
+
+https://aaronparecki.com/articles/2015/04/26/1/html-is-my-api
+
+"So in 2.5 years of parsing the HTML, I never had any problems. In 2 days of parsing the JSON API, I hit a glitch where all the stories were empty."
+
+---
+
 ## Interop - Webmention/Indie-Action
 
 &lt;link rel="webmention" href="http://www.flutterby.com/archives/webmention.cgi" /&gt;
 
 &lt;indie-action do="post" with="http://www.flutterby.com/archives/comments/20715.html"&gt;
 &lt;form method="post" accept-charset="UTF-8" style="margin-left: 0;" action="/archives/viewentry.cgi?id=20715"&gt;
-
----
-
-## Interop - Hacking MIME types
-
-Evolving.
 
 ---
 
@@ -277,6 +281,16 @@ Evolving.
 ## Detractors
 
 Clay Shirky's "Bad Idea Bulletin Board" https://ello.co/cshirky/post/fN-7ZRpvarjpZE34HwGkoA
+
+---
+
+## What can you do?
+
+- Start with Microformats markup
+- Own your personal blogging
+- Future proof by publishing to your business's site first.
+- Make sure your archives are safe
+- Hack with us!
 
 ---
 
