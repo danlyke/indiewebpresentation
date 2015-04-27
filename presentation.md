@@ -38,7 +38,7 @@ Not quite escribitionism
 
 The Facebook of the '90s:
 
-<img src="diagrams/AOLFloppy.jpg">
+<img width="456" height="480" src="diagrams/AOLFloppy.jpg">
 
 ---
 
@@ -74,6 +74,7 @@ http://www.slate.com/articles/technology/future_tense/2015/04/myfamily_shuttered
 ---
 
 ## Silos: Evil
+
 - Controlling presentation / Sociology experiments on you.
 - NymWars
 - Content restrictions
@@ -144,6 +145,30 @@ A few lines of code back in May of 2009...
 
 ---
 
+## POSSE - Known
+
+<img src="./diagrams/KnownStatusEntry.png">
+
+---
+
+## POSSE - Known
+
+<img src="./diagrams/KnownPost.png">
+
+---
+
+## POSSE - Known On Facebook
+
+<img src="./diagrams/KnownPostFacebookSide.png">
+
+---
+
+## POSSE - Known on Known
+
+<img src="./diagrams/KnownPostFacebook.png">
+
+---
+
 ## Micropub
 
 http://indiewebcamp.com/micropub 
@@ -158,6 +183,7 @@ Micropub is an open API standard that is used to create posts on one's own domai
 https://feverdream.herokuapp.com/
 
 Feverdream lets you use Micropub clients like Quill to post to hosted blogs on Wordpress.com, Tumblr, or Blogger. 
+
 ---
 
 ## PESOS
